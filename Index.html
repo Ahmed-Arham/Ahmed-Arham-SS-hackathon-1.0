@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediAssist AI - Professional Healthcare Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <div class="header-text">
+                    <h1>MediAssist AI</h1>
+                    <p class="tagline">Professional Healthcare Guidance & Assistance</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <i class="fas fa-robot"></i>
+                        <h2>Healthcare Assistant</h2>
+                    </div>
+                    <div class="status">
+                        <div class="status-dot"></div>
+                        <span>Online</span>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <p>Hello! I'm MediAssist AI, your professional healthcare assistant. I'm here to provide medical guidance, answer health questions, and help you find healthcare resources.</p>
+                        <div class="warning">
+                            <i class="fas fa-exclamation-triangle"></i> <strong>Medical Disclaimer:</strong> This is for informational purposes only. Always consult a healthcare professional for medical advice.
+                        </div>
+                        <p>How may I assist you today?</p>
+                        <div class="quick-options">
+                            <button class="option-btn" onclick="selectOption(this)">Symptom Analysis</button>
+                            <button class="option-btn" onclick="selectOption(this)">First Aid Guidance</button>
+                            <button class="option-btn" onclick="selectOption(this)">Find Healthcare</button>
+                        </div>
+                        <div class="message-time" id="currentTime"></div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="userInput" placeholder="Describe your symptoms or ask a question..." onkeypress="handleKeyPress(event)">
+                    <button class="send-btn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="features-container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>Symptom Analysis</h3>
+                        <p>Get preliminary analysis of symptoms with guidance on when to seek professional medical care.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-medical"></i>
+                        </div>
+                        <h3>First Aid Guidance</h3>
+                        <p>Step-by-step instructions for common medical emergencies before professional help arrives.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Healthcare Locator</h3>
+                        <p>Find nearby hospitals, clinics, and pharmacies based on your location and needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>Medicine Information</h3>
+                        <p>Access details about medications, dosages, side effects, and potential interactions.</p>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <h2>Healthcare Access Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="stat-value">80%</div>
+                            <div class="stat-label">Shortfall in Rural Health Centers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">700M+</div>
+                            <div class="stat-label">Smartphone Users in India</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">425M</div>
+                            <div class="stat-label">Rural Smartphone Users</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Healthcare Assistance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>MediAssist AI - Bridging Healthcare Gaps with Technology | Supports Multiple Indian Languages</p>
+            <div class="language-options">
+                <button class="lang-btn active">English</button>
+                <button class="lang-btn" onclick="changeLanguage('hindi')">हिन्दी</button>
+                <button class="lang-btn" onclick="changeLanguage('tamil')">தமிழ்</button>
+                <button class="lang-btn" onclick="changeLanguage('telugu')">తెలుగు</button>
+                <button class="lang-btn" onclick="changeLanguage('bengali')">বাংলা</button>
+                <button class="lang-btn" onclick="changeLanguage('marathi')">मराठी</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
